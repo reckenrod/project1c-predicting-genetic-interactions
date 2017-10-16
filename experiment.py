@@ -40,6 +40,6 @@ random.shuffle(tmp)
 vectors, scores = zip(*tmp)
 
 # Create a RandomForestRegression on the dataset with cross validation
-# Output R2 scores for 10 cross validations
-rf = RandomForestRegressor(max_depth=10, n_estimators=10)
-print cross_val_score(estimator=rf, X=vectors, y=scores, cv=10, scoring="r2")
+# Output R2 scores for 300 cross validations
+rf = RandomForestRegressor(max_depth=10, n_estimators=300)
+print cross_val_score(estimator=rf, X=vectors, y=scores, cv=4, scoring="r2")
